@@ -44,7 +44,7 @@ public class RPS_Player {
 
         if(numberOfGamesPlayed == 0 ) {return 0;}
         else{
-        return numberOfGamesWon/numberOfGamesPlayed;}
+        return (double) numberOfGamesWon/numberOfGamesPlayed;}
     }
 
     /**
@@ -72,7 +72,7 @@ public class RPS_Player {
 
         if(anotherPlayer.choice == choice){ numberOfGamesPlayed++; return null;} else if ((anotherPlayer.choice == 0 && choice == 1 ) || (anotherPlayer.choice == 2 && choice == 0) || (anotherPlayer.choice == 1 && choice == 2)){numberOfGamesWon++; numberOfGamesPlayed++;return this;
             
-        }else{anotherPlayer.numberOfGamesWon++; numberOfGamesPlayed++; return anotherPlayer;}
+        }else{anotherPlayer.numberOfGamesWon++; anotherPlayer.numberOfGamesPlayed++; return anotherPlayer;}
 
 
     }
@@ -91,7 +91,7 @@ public class RPS_Player {
 
         if(anotherPlayer.choice == choice){numberOfGamesPlayed++; return null;} else if ((anotherPlayer.choice == 0 && choice == 1 ) || (anotherPlayer.choice == 2 && choice == 0) || (anotherPlayer.choice == 1 && choice == 2)){numberOfGamesPlayed++; numberOfGamesWon++; return this;
 
-        }else{ anotherPlayer.numberOfGamesWon++; numberOfGamesPlayed++;return anotherPlayer;}
+        }else{ anotherPlayer.numberOfGamesWon++; anotherPlayer.numberOfGamesPlayed++;return anotherPlayer;}
 
     }
 
