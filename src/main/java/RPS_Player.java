@@ -70,9 +70,9 @@ public class RPS_Player {
         anotherPlayer.choice = rand.nextInt(3);
         choice = rand.nextInt(3);
 
-        if(anotherPlayer.choice == choice){ numberOfGamesPlayed++; return null;} else if ((anotherPlayer.choice == 0 && choice == 1 ) || (anotherPlayer.choice == 2 && choice == 0) || (anotherPlayer.choice == 1 && choice == 2)){numberOfGamesWon++; numberOfGamesPlayed++;return this;
+        if(anotherPlayer.choice == choice){   anotherPlayer.numberOfGamesPlayed++;numberOfGamesPlayed++; return null;} else if ((anotherPlayer.choice == 0 && choice == 1 ) || (anotherPlayer.choice == 2 && choice == 0) || (anotherPlayer.choice == 1 && choice == 2)) { anotherPlayer.numberOfGamesPlayed++;numberOfGamesWon++; numberOfGamesPlayed++;return this;
             
-        }else{anotherPlayer.numberOfGamesWon++; anotherPlayer.numberOfGamesPlayed++; return anotherPlayer;}
+        }else{numberOfGamesPlayed++;anotherPlayer.numberOfGamesWon++; anotherPlayer.numberOfGamesPlayed++; return anotherPlayer;}
 
 
     }
@@ -89,9 +89,9 @@ public class RPS_Player {
         anotherPlayer.choice = rand.nextInt(3);
 
 
-        if(anotherPlayer.choice == choice){numberOfGamesPlayed++; return null;} else if ((anotherPlayer.choice == 0 && choice == 1 ) || (anotherPlayer.choice == 2 && choice == 0) || (anotherPlayer.choice == 1 && choice == 2)){numberOfGamesPlayed++; numberOfGamesWon++; return this;
+        if(anotherPlayer.choice == choice){  anotherPlayer.numberOfGamesPlayed++; numberOfGamesPlayed++; return null;} else if ((anotherPlayer.choice == 0 && choice == 1 ) || ( anotherPlayer.choice == 2 && choice == 0) || (anotherPlayer.choice == 1 && choice == 2)){  anotherPlayer.numberOfGamesPlayed++;numberOfGamesPlayed++; numberOfGamesWon++; return this;
 
-        }else{ anotherPlayer.numberOfGamesWon++; anotherPlayer.numberOfGamesPlayed++;return anotherPlayer;}
+        }else{ numberOfGamesPlayed++;anotherPlayer.numberOfGamesWon++; anotherPlayer.numberOfGamesPlayed++;return anotherPlayer;}
 
     }
 
